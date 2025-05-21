@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualized.ai – AI Video & Bild Content</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #ccc;
+    }
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #0ff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #222;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    .lang-switch button {
+      background: none;
+      border: none;
+      color: #0ff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="switchLang('de')">DE</button> |
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+  <header>
+    <h1 data-de="Visualized.ai – Visuelle AI-Inhalte" data-en="Visualized.ai – Visual AI Content">Visualized.ai – Visuelle AI-Inhalte</h1>
+    <p data-de="Videos & Bilder – schnell, modern, professionell." data-en="Videos & Images – fast, modern, professional.">
+      Videos & Bilder – schnell, modern, professionell.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#leistungen" data-de="Leistungen" data-en="Services">Leistungen</a>
+    <a href="#beispiele" data-de="Beispiele" data-en="Examples">Beispiele</a>
+    <a href="#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a>
+  </nav>
+
+  <section id="leistungen">
+    <h2 data-de="Was ich anbiete" data-en="What I Offer">Was ich anbiete</h2>
+    <ul>
+      <li data-de="AI-generierte Videos (Reels, Promos, Stories)" data-en="AI-generated videos (Reels, Promos, Stories)">AI-generierte Videos (Reels, Promos, Stories)</li>
+      <li data-de="Bild-Content mit Midjourney & Bearbeitung" data-en="Image content with Midjourney & editing">Bild-Content mit Midjourney & Bearbeitung</li>
+      <li data-de="Monatliche Content-Pakete für Social Media" data-en="Monthly content packages for social media">Monatliche Content-Pakete für Social Media</li>
+      <li data-de="Individuelle Projekte: Events, Erklärvideos, Branding" data-en="Custom projects: events, explainer videos, branding">Individuelle Projekte: Events, Erklärvideos, Branding</li>
+    </ul>
+  </section>
+
+  <section id="beispiele">
+    <h2 data-de="Beispiele & Showreel" data-en="Examples & Showreel">Beispiele & Showreel</h2>
+    <p data-de="Hier findest du bald Beispiele meiner Arbeit – inklusive Videos & Visuals." 
+       data-en="You’ll soon find examples of my work here – including videos and visuals.">
+      Hier findest du bald Beispiele meiner Arbeit – inklusive Videos & Visuals.
+    </p>
+  </section>
+
+  <section id="kontakt">
+    <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
+    <p data-de="Projektidee? Einfach eine Nachricht an: info@visualized.ai"
+       data-en="Got a project? Just email: info@visualized.ai">
+      Projektidee? Einfach eine Nachricht an: info@visualized.ai
+    </p>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.innerText = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
